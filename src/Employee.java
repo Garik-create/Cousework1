@@ -1,13 +1,15 @@
 public class Employee {
     private final String employeeName;
-    int departmentId;
-    int employeeSalary;
-    int id;
+    private int departmentId;
+    private int employeeSalary;
+    private static int id;
 
-    public Employee(String employeeName, int departmentId, int employeeSalary) {
+    public Employee(String employeeName, int departmentId, int employeeSalary, int id) {
+
         this.employeeName = employeeName;
         this.departmentId = departmentId;
         this.employeeSalary = employeeSalary;
+        this.id = id;
     }
 
     public String getEmployeeName() {
@@ -33,7 +35,6 @@ public class Employee {
     public void setEmployeeSalary(int employeeSalary) {
         this.employeeSalary = employeeSalary;
     }
-
 
 
     @Override
