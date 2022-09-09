@@ -2,14 +2,15 @@ public class Employee {
     private final String employeeName;
     private int departmentId;
     private int employeeSalary;
-    private static int id;
+    private static int counter;
+    private final int id;
 
-    public Employee(String employeeName, int departmentId, int employeeSalary, int id) {
+    public Employee(String employeeName, int departmentId, int employeeSalary) {
 
         this.employeeName = employeeName;
         this.departmentId = departmentId;
         this.employeeSalary = employeeSalary;
-        this.id = id;
+        this.id = ++counter;
     }
 
     public String getEmployeeName() {

@@ -1,5 +1,5 @@
 public class CourseWork1 {
-    static Employee[] employee = new Employee[10];
+    private static Employee[] employee = new Employee[10];
     private static void printCredentialsEmployees() {
         System.out.println();
         for (Employee employee : employee) {
@@ -17,11 +17,8 @@ public class CourseWork1 {
         int maxEmployeeSalary = -1;
         int j = 0;
         for (int i = 0; i < employee.length; i++) {
-            if (employee[i] != null) {
-                if (employee[i].getEmployeeSalary() > maxEmployeeSalary) {
-                    maxEmployeeSalary = employee[i].getEmployeeSalary();
+            if (employee[i] != null && employee[i].getEmployeeSalary() > maxEmployeeSalary) {
                     j = i;
-                }
             }
         }
         return employee[j];
@@ -31,11 +28,9 @@ public class CourseWork1 {
         int minEmployeeSalary = countSumSalaries();
         int j = 0;
         for (int i = 0; i < employee.length; i++) {
-            if (employee[i] != null) {
-                if (employee[i].getEmployeeSalary() < minEmployeeSalary) {
+            if (employee[i] != null && employee[i].getEmployeeSalary() < minEmployeeSalary) {
                     minEmployeeSalary = employee[i].getEmployeeSalary();
                     j = i;
-                }
             }
         }
         return employee[j];
@@ -61,28 +56,16 @@ public class CourseWork1 {
         return sumSalaries;
     }
 
-    //    static int count = 0;
-    static int id = 0;
-    public static int getId(){
-        id++;
-
-        return id;
-    }
 
     public static void main(String[] args) {
 
 
-//        Employee employee1 = ;
-//        Employee employee2 = ;
-//        Employee employee3 = ;
-//        Employee employee4 = ;
-//        Employee employee5 = ;
 
-        employee[0] = new Employee("Иванов Иван Иванович", 5, 50_000, getId());
-        employee[1] = new Employee("Петров Пётр Петрович", 4, 100_000, getId());
-        employee[2] = new Employee("Сидоров Сидр Сидорович", 3, 150_000, getId());
-        employee[3] = new Employee("Фёдоров Фёдор Фёдорович", 2, 200_000, getId());
-        employee[4] = new Employee("Степанов Степан Степанович", 1, 250_000, getId());
+        employee[0] = new Employee("Иванов Иван Иванович", 5, 50_000);
+        employee[1] = new Employee("Петров Пётр Петрович", 4, 100_000);
+        employee[2] = new Employee("Сидоров Сидр Сидорович", 3, 150_000);
+        employee[3] = new Employee("Фёдоров Фёдор Фёдорович", 2, 200_000);
+        employee[4] = new Employee("Степанов Степан Степанович", 1, 250_000);
 
 
         printEmployeeList();
